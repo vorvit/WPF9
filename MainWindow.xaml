@@ -49,7 +49,7 @@
                     <ComboBox Margin="5" Padding="5" SelectedIndex="2" Width="50" ItemsSource="{StaticResource fontsSize}" SelectionChanged="ComboBox_SelectionChanged_1"/>
                 </ToolBar>
                 <ToolBar Margin="5" Padding="5">
-                    <Button x:Name="btnBold" Height="25" Width="25" Click="btnBold_Click">
+                    <Button x:Name="btnBold" Height="25" Width="25" Background="LightGray" Click="btnBold_Click">
                         <Image Source="Icons/bold-text-option.png"/>
                     </Button>
                     <Separator/>

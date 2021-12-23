@@ -19,6 +19,7 @@ namespace WPF9
              */
             InitializeComponent();
             FillFontComboBox(comboBoxFonts);
+            textBox.TextDecorations = null;
             List<string> styles = new List<string>() {"Светлая тема", "Тёмная тема"};
             styleBox.ItemsSource = styles;
             styleBox.SelectionChanged += ThemeChange;
@@ -51,7 +52,6 @@ namespace WPF9
                 else
                     textBox.Foreground = Brushes.Red;
             }
-
         }
 
         public void FillFontComboBox(ComboBox comboBoxFonts)
@@ -95,12 +95,12 @@ namespace WPF9
 
         private void btnUnderLine_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.TextDecorations == TextDecorations.Baseline)
+            if (textBox.TextDecorations == null)
             {
                 textBox.TextDecorations = TextDecorations.Underline;
             }
             else
-                textBox.TextDecorations = TextDecorations.Baseline;
+                textBox.TextDecorations = null;
         }
 
         private void rbtnRed_Click(object sender, RoutedEventArgs e)
